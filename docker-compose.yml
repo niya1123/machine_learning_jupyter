@@ -14,6 +14,6 @@ services:
       - NB_UID=$UID
       - NB_GID=$GID
       - TZ=Asia/Tokyo
-    command: start.sh jupyter lab --NotebookApp.token=''
+    command: start-notebook.sh --NotebookApp.token=''
     tty: true
     stdin_open: true
