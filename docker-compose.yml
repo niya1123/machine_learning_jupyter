@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  jupyter:
+    build: .
+    ports:
+      - 8888:8888
+    container_name: ml
+    volumes:
+      - .:/home/jovyan/work
+    user: root
+    environment:
+      - GRANT_SUDO=yes
+      - NB_UID=$UID
+      - NB_GID=$GID
+      - TZ=Asia/Tokyo
+    command: start.sh jupyter lab --NotebookApp.token=''
+    tty: true
+    stdin_open: true
