@@ -6,4 +6,6 @@ RUN pip install -U pip && \
     pip install \
     numpy \
     scikit-learn \
-    matplotlib
+    matplotlib \
+    keras \
+    tensorflow
